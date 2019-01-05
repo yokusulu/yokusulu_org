@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('name', 50)->nullable(false);
             $table->string('email', 100)->nullable(false);
             $table->string('password', 100)->nullable(false);
-            $table->integer('del_flg', 1)->default("0");
+            $table->integer('del_flg', 1)->default($0);
             $table->timestamps('created_at');
             $table->timestamps('updated_at');
 
@@ -30,7 +30,7 @@ class CreatePostsTable extends Migration
             $table->string('city', 30)->nullable(false);
             $table->string('ward', 30)->nullable(false);
             $table->string('address', 30)->nullable(false);
-            $table->integer('del_flg', 1)->default("0");
+            $table->integer('del_flg', 1)->default($0);
             $table->timestamps('created_at');
             $table->timestamps('updated_at');
 
@@ -39,7 +39,7 @@ class CreatePostsTable extends Migration
           $table->string('name', 50)->nullable(false);
           $table->string('email', 100)->nullable(false);
           $table->string('password', 100)->nullable(false);
-          $table->integer('del_flg', 1)->default("0");
+          $table->integer('del_flg', 1)->default($0);
           $table->timestamps('created_at');
           $table->timestamps('updated_at');
 
@@ -53,29 +53,28 @@ class CreatePostsTable extends Migration
           $table->string('ward', 30)->nullable(false);
           $table->string('address', 30)->nullable(false);
           $table->integer('price', 8)->nullable(false);
-          $table->integer('del_flg', 1)->default("0");
+          $table->integer('del_flg', 1)->default($0);
           $table->timestamps('created_at');
           $table->timestamps('updated_at');
 
         Schema::create('detail_houses', function (Blueprint $table) {
-          $table->increments('id');
-          $table->string('name');
-          $table->text('houses_id');
-          $table->text('description');
-          $table->integer('del_flg', 1)->default("0");
+          $table->unsigned('id')->increments('id')->primary('id');
+          $table->integer('houses_id', 10)->nullable(false);
+          $table->text('description')->nullable(false);
+          $table->integer('del_flg', 1)->default($0);
           $table->timestamps('created_at');
           $table->timestamps('updated_at');
 
         Schema::create('disable_booking_dates', function (Blueprint $table) {
-          $table->increments('id');
-          $table->string('houses_id');
-          $table->text('year');
-          $table->text('month');
-          $table->text('day');
+          $table->unsigned('id')->increments('id')->primary('id');
+          $table->integer('houses_id', 10)->nullable(false);
+          $table->integer('year', 4)->nullable(false);
+          $table->integer('month', 2)->nullable(false);
+          $table->integer('day', 2)->nullable(false);
 
         Schema::create('house_images', function (Blueprint $table) {
-          $table->increments('id');
-          $table->string('houses_id');
+          $table->unsigned('id')->increments('id',10)->primary('id');
+          $table->integer('houses_id', 10)->nullable(false);
           $table->text('images');
         });
     }
