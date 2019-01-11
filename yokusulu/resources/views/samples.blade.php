@@ -1,27 +1,21 @@
-@section('page_css')
-        <!-- ページ毎のCSSを記載する -->
+@extends('layout.common')
+
+@section('title', 'samplepage')
+@section('description', '説明文')
+@section('pageCss')
+<link href="/css/page.css" rel="stylesheet">
 @endsection
 
-@include('layout.head', ['title' => $title])
+@include('layout.head')
+
 @include('layout.header')
 
-    <body>
-        <div class="flex-center position-ref full-height">
+@section('content')
+    <p>コンテンツ内容</p>
+@endsection
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+@section('pageJs')
+<script src="/js/page.js"></script>
+@endsection
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    @include('layout.footer')
-    </body>
+@include('layout.footer')

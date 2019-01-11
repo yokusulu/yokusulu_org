@@ -1,3 +1,5 @@
-    <header>
-                        <a>header</a>
-    </header>
+@section('header')
+<header class="header">
+    ヘッダー
+</header>
+@endsection
