@@ -1,4 +1,4 @@
-<DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html lang="ja">
 <head>
 @yield('head')
