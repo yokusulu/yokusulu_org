@@ -14,7 +14,7 @@ class CreateHouseImagesTable extends Migration
     public function up()
     {
         Schema::create('house_images', function (Blueprint $table) {
-            $table->integer('id')->unsigned('id')->increments('id')->primary('id');
+            $table->increments('id')->nullable(false);
             $table->unsignedInteger('houses_id')->nullable(false);
             $table->binary('images');
             $table->foreign('houses_id')->references('id')->on('houses');

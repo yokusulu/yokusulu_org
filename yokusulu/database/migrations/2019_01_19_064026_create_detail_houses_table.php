@@ -14,7 +14,7 @@ class CreateDetailHousesTable extends Migration
     public function up()
     {
         Schema::create('detail_houses', function (Blueprint $table) {
-            $table->integer('id')->unsigned('id')->increments('id')->primary('id')->nullable('id');
+            $table->increments('id')->nullable(false);
             $table->unsignedInteger('houses_id')->nullable(false);
             $table->text('description')->nullable();
             $table->boolean('del_flg')->default(0);

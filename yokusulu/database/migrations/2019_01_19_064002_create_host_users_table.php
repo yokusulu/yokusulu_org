@@ -14,7 +14,7 @@ class CreateHostUsersTable extends Migration
     public function up()
     {
         Schema::create('host_users', function (Blueprint $table) {
-            $table->integer('id')->unsigned('id')->increments('id')->primary('id')->nullable('id');
+            $table->increments('id')->nullable(false);
             $table->unsignedInteger('user_id')->nullable(false);
             $table->string('phone', 11)->nullable(false);
             $table->string('zip', 7)->nullable(false);

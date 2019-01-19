@@ -14,7 +14,7 @@ class CreateHousesTable extends Migration
     public function up()
     {
         Schema::create('houses', function (Blueprint $table) {
-            $table->integer('id')->unsigned('id')->increments('id')->primary('id')->nullable('id');
+            $table->increments('id')->nullable(false);
             $table->string('name', 100)->nullable(false);
             $table->string('host_name', 50)->nullable(false);
             $table->string('zip', 7)->nullable(false);
