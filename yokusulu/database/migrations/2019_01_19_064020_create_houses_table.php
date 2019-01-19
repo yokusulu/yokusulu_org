@@ -14,20 +14,17 @@ class CreateHousesTable extends Migration
     public function up()
     {
         Schema::create('houses', function (Blueprint $table) {
-            $table->integer('id',10)->unsigned('id')->increments('id')->primary('id')->nullable('id');
+            $table->integer('id')->unsigned('id')->increments('id')->primary('id')->nullable('id');
             $table->string('name', 100)->nullable(false);
             $table->string('host_name', 50)->nullable(false);
-            $table->integer('zip', 7)->nullable(false);
+            $table->string('zip', 7)->nullable(false);
             $table->string('prefecture', 10)->nullable(false);
             $table->string('city', 30)->nullable(false);
             $table->string('ward', 30)->nullable(false);
             $table->string('address', 30)->nullable(false);
-            $table->integer('price', 8)->nullable(false);
-            $table->integer('del_flg', 1)->default(0);
-            $table->timestamps('created_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
-            $table->timestamps('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
-            $table->engine = 'InnoDB';
-            $table->charset = 'utf8';
+            $table->integer('price')->nullable(false);
+            $table->boolean('del_flg')->default(0);
+            $table->timestamps();
         });
     }
 

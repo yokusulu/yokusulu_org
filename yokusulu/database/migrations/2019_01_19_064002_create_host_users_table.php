@@ -14,19 +14,17 @@ class CreateHostUsersTable extends Migration
     public function up()
     {
         Schema::create('host_users', function (Blueprint $table) {
-            $table->integer('id',10)->unsigned('id')->increments('id')->primary('id')->nullable('id');
-            $table->integer('user_id',10)->unsigned('id')->nullable(false);
+            $table->integer('id')->unsigned('id')->increments('id')->primary('id')->nullable('id');
+            $table->unsignedInteger('user_id')->nullable(false);
             $table->string('phone', 11)->nullable(false);
-            $table->integer('zip', 7)->nullable(false);
+            $table->string('zip', 7)->nullable(false);
             $table->string('prefecture', 10)->nullable(false);
             $table->string('city', 30)->nullable(false);
             $table->string('ward', 30)->nullable(false);
             $table->string('address', 30)->nullable(false);
-            $table->integer('del_flg', 1)->default(0);
-            $table->timestamps('created_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
-            $table->timestamps('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
-            $table->engine = 'InnoDB';
-            $table->charset = 'utf8';
+            $table->boolean('del_flg')->default(0);
+            $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

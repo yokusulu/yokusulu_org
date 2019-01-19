@@ -14,15 +14,12 @@ class CreateDetailHousesTable extends Migration
     public function up()
     {
         Schema::create('detail_houses', function (Blueprint $table) {
-            $table->foreign('houses_id')->references('id')->on('detail_houses');
-            $table->integer('id',10)->unsigned('id')->increments('id')->primary('id')->nullable('id');
-            $table->integer('houses_id', 10)->nullable(false);
+            $table->integer('id')->unsigned('id')->increments('id')->primary('id')->nullable('id');
+            $table->unsignedInteger('houses_id')->nullable(false);
             $table->text('description')->nullable();
-            $table->integer('del_flg', 1)->default(0);
-            $table->timestamps('created_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
-            $table->timestamps('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
-            $table->engine = 'InnoDB';
-            $table->charset = 'utf8';
+            $table->boolean('del_flg')->default(0);
+            $table->timestamps();
+            $table->foreign('houses_id')->references('id')->on('houses');
         });
     }
 

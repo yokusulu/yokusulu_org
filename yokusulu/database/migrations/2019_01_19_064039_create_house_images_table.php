@@ -14,12 +14,10 @@ class CreateHouseImagesTable extends Migration
     public function up()
     {
         Schema::create('house_images', function (Blueprint $table) {
-            $table->foreign('houses_id')->references('id')->on('house_images');
-            $table->integer('id',10)->unsigned('id')->increments('id',10)->primary('id');
-            $table->integer('houses_id', 10)->nullable(false);
-            $table->binary('data');
-            $table->engine = 'InnoDB';
-            $table->charset = 'utf8';
+            $table->integer('id')->unsigned('id')->increments('id')->primary('id');
+            $table->unsignedInteger('houses_id')->nullable(false);
+            $table->binary('images');
+            $table->foreign('houses_id')->references('id')->on('houses');
         });
     }
 

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Host_users extends Model
+class Detail_house extends Model
 {
     //
 }

@@ -14,12 +14,12 @@ class CreateDisableBookingDatesTable extends Migration
     public function up()
     {
         Schema::create('disable_booking_dates', function (Blueprint $table) {
-            $table->foreign('houses_id')->references('id')->on('disable_booking_dates');
-            $table->integer('id',10)->unsigned('id')->increments('id')->primary('id')->nullable('id');
-            $table->integer('houses_id', 10)->nullable(false);
-            $table->integer('year', 4)->nullable(false);
-            $table->integer('month', 2)->nullable(false);
-            $table->integer('day', 2)->nullable(false);
+            $table->integer('id')->unsigned('id')->increments('id')->primary('id')->nullable('id');
+            $table->unsignedInteger('houses_id')->nullable(false);
+            $table->smallInteger('year')->nullable(false);
+            $table->smallInteger('month')->nullable(false);
+            $table->smallInteger('day')->nullable(false);
+            $table->foreign('houses_id')->references('id')->on('houses');
         });
     }
 
