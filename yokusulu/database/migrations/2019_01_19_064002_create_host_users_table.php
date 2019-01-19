@@ -15,7 +15,7 @@ class CreateHostUsersTable extends Migration
     {
         Schema::create('host_users', function (Blueprint $table) {
             $table->increments('id')->nullable(false);
-            $table->unsignedInteger('user_id')->nullable(false);
+            $table->unsignedInteger('users_id')->nullable(false);
             $table->string('phone', 11)->nullable(false);
             $table->string('zip', 7)->nullable(false);
             $table->string('prefecture', 10)->nullable(false);
@@ -24,7 +24,7 @@ class CreateHostUsersTable extends Migration
             $table->string('address', 30)->nullable(false);
             $table->boolean('del_flg')->default(0);
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('users_id')->references('id')->on('users');
         });
     }
 
