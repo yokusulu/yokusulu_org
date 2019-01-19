@@ -9,8 +9,8 @@ class HousesTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
-        $this->call(HousesTableSeed::class);
-    }
+     public function run()
+ 	{
+ 		factory(App\House::class, 10)->create();
+ 	}
 }
