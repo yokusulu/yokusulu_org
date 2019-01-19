@@ -2,7 +2,7 @@
 use Carbon\Carbon;
 use Faker\Generator as Faker;
 
-$factory->define(App\Houses::class, function (Faker $faker) {
+$factory->define(App\House::class, function (Faker $faker) {
     $names = [
         "コーポグランデュオ",
         "モンシャトー加藤",
@@ -87,6 +87,7 @@ $factory->define(App\Houses::class, function (Faker $faker) {
 			0,
 			1,
 	];
+    $carbon = new Carbon();
     return [
         'name' => $faker->randomElement($names),
         'host_name' => $faker->randomElement($host_names),
