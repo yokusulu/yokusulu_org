@@ -17,6 +17,7 @@ class CreateHouseImagesTable extends Migration
             $table->increments('id')->nullable(false);
             $table->unsignedInteger('houses_id')->nullable(false);
             $table->binary('images');
+            $table->timestamps();
             $table->foreign('houses_id')->references('id')->on('houses');
         });
     }
