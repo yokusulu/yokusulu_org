@@ -8,6 +8,6 @@ class SearchController extends Controller
 {
     public function index() {
 		$title = 'ヨクスル';
-		return view("search", compact('title'));
+		return view("search/search", compact('title'));
 	}
 }
