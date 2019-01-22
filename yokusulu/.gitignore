@@ -14,3 +14,5 @@ yarn-error.log
 .env
 .phpunit.result.cache
 .DS_Store
+.sass-cache
+.package-lock.json
