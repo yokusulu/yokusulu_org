@@ -1,6 +1,6 @@
 @extends('layout.common')
 
-@section('title', 'samplepage')
+@section('title', 'hoge')
 @section('description', '説明文')
 @section('pageCss')
 <link href="/css/page.css" rel="stylesheet">
