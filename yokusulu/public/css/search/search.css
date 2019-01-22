@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+.list {
+  padding: 30px;
+  padding-top: 20px;
+  height: auto;
+  background-color: #F0F0E9;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.list .fade-up {
+  -webkit-transition: opacity 0.8s !important;
+  transition: opacity 0.8s !important;
+}
+
+.list h1 {
+  width: 100%;
+  font-family: 'Kaushan Script', cursive;
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.list .listItem {
+  max-width: 380px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  margin: 10px;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  -webkit-transition-duration: 0.5s !important;
+          transition-duration: 0.5s !important;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.list .listItem:hover {
+  -webkit-transform: translate3d(2px, 2px, 0) !important;
+          transform: translate3d(2px, 2px, 0) !important;
+  -webkit-box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+          box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+}
+
+.list .listItem .listItem__img {
+  margin-bottom: 20px;
+  overflow: hidden;
+  /*拡大時にはみ出た部分を隠す*/
+  width: 100%;
+  height: auto;
+}
+
+.list .listItem .listItem__img img {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
+  opacity: 0.8;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  /*変化に掛かる時間*/
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.list .listItem .listItem__img img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  /*画像の拡大率*/
+  cursor: pointer;
+  opacity: 1;
+}
+
+.list .listItem p {
+  display: block;
+  opacity: 0.7;
+  overflow: hidden;
+  height: 75px;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
