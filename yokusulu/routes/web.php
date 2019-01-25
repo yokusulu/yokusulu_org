@@ -18,4 +18,4 @@ Route::any('/mypage', 'MypagesController@index');
 // 会員情報トップ画面
 Route::any('/mypage/myinfo', 'MypagesController@myinfo');
 // 会員情報トップ画面
-Route::post('/mypage/myinfo/edit', 'MypagesController@myinfo_edit');
+Route::any('/mypage/myinfo/edit', 'MypagesController@myinfo_edit');

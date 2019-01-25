@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+.user_info_table {
+  width: 80%;
+  margin: auto;
+}
+
+.user_info_table table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 70px auto 0px;
+}
+
+.user_info_table table th,
+.user_info_table table td {
+  border: solid 1px black;
+}
+
+.myinfo_edit_btn_box {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.myinfo_edit_btn_box .myinfo_edit_btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;
+  /*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+}
+
+.myinfo_edit_btn_box .myinfo_edit_btn:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  /*下に動く*/
+  border-bottom: none;
+  /*線を消す*/
+}
+

@@ -18,7 +18,7 @@ class MypagesController extends Controller {
 	}
 	// 会員情報編集画面
 	public function myinfo_edit () {
-		//var_dump(Request::all()); die;
+		var_dump('a'); die;
 		return view("mypage.myinfo.edit", compact('title'));
 	}
 }
