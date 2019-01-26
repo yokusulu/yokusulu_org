@@ -9,6 +9,9 @@ class SearchController extends Controller
 
     public function index(Request $request)
     {
-        return view('search.index');
+        $prefecture = $_POST['prefecture'];
+        $checkin    = $_POST['checkin'];
+        $checkout   = $_POST['checkout'];
+        return view('search.index',conpact('prefecture','checkin','checkout'));
     }
 }
