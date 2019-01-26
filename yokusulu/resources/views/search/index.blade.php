@@ -17,7 +17,7 @@
                 {{ csrf_field()}}
                 <tr>
                     <p>都道府県</p>
-                    <input class="search_input" type="text" name="prefecture" placeholder="例:東京都">
+                    {{$prefecture}}
                 </tr>
                 <tr>
                     <p>チェックイン</p>
@@ -27,7 +27,6 @@
                     <p>チェックアウト</p>
                     <input class="search_input" type="text" name="checkout" placeholder="yyyy/mm/dd">
                 </tr>
-                <input type="submit" value="検索">
             </form>
         </div>
     </div>
