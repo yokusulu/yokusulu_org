@@ -13,11 +13,22 @@
 @section('content')
     <div class="container">
         <div class="search_box">
-            <form action="">
-                
+            <form action="/search" method="post">
+                {{ csrf_field()}}
+                <tr>
+                    <p>都道府県</p>
+                    <input class="search_input" type="text" name="prefecture" placeholder="例:東京都">
+                </tr>
+                <tr>
+                    <p>チェックイン</p>
+                    <input class="search_input" type="text" name="checkin" placeholder="yyyy/mm/dd">
+                </tr>
+                <tr>
+                    <p>チェックアウト</p>
+                    <input class="search_input" type="text" name="checkout" placeholder="yyyy/mm/dd">
+                </tr>
             </form>
         </div>
-
     </div>
 @endsection
 
