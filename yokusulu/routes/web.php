@@ -13,3 +13,8 @@
 
 Route::get('/', function () {    return view('welcome');});
 Route::get('sample', 'SamplesController@index');
+// 会員登録画面
+Route::get('member', 'MembersController@index');
+// 会員登録・確認画面
+Route::post('member/check', 'MembersController@check');
+

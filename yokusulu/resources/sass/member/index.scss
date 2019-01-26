@@ -1,0 +1,43 @@
+.regist_title_box {
+	width: 80%;
+	margin: 15px auto 0px;
+	font-size: 30px;
+	font-weight: bold;
+	p {
+		text-align: center;
+	}
+}
+
+.member_regist_box {
+width: 80%;
+margin: 50px auto 0px;
+	.regist_genre{
+	width: 60%;
+	padding: 20px;
+	}
+	.regist_input{
+	width: 40%;
+		input{
+			width: 80%;
+		}
+	}
+}
+.submit_btn_box{
+margin-top: 25px;
+text-align: center;
+	.btn {
+	display       : inline-block;
+	font-size     : 11pt;        /* 文字サイズ */
+	text-align    : center;      /* 文字位置   */
+	cursor        : pointer;     /* カーソル   */
+	padding       : 12px 12px;   /* 余白       */
+	background    : rgba(255, 153, 153, 0.85);     /* 背景色     */
+	color         : #ffffff;     /* 文字色     */
+	line-height   : 1em;         /* 1行の高さ  */
+	opacity       : 1;           /* 透明度     */
+	transition    : .3s;         /* なめらか変化 */
+	}
+	.btn:hover {
+	  opacity       : 0.8;         /* カーソル時透明度 */
+	}
+}
