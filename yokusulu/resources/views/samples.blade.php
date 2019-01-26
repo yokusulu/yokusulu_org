@@ -16,6 +16,7 @@
 
 @section('pageJs')
 <script src="/js/page.js"></script>
+<script src=" {{ asset('js/vue_dev.js') }} "></script>
 @endsection
 
 @include('layout.footer')
