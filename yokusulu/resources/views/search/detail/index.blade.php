@@ -11,16 +11,11 @@
 @include('layout.header')
 
 @section('content')
-    @if( App::environment(['local', 'staging']) )
-        Vue.config.devtools = true;
-    @endif
-
     <p>詳細画面</p>
     <div id="components-demo">
         <button-counter></button-counter>
     </div>
-    <Amountcalucukation>
-    </Amountcalucukation>
+    <amount-calculation-component></amount-calculation-component>
 @endsection
 
 @section('pageJs')

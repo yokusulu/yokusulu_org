@@ -18,7 +18,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('AmountCalculation', require('./components/AmountCalculation.vue'));
+Vue.component('amount-calculation-component', require('./components/AmountCalculation.vue'));
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
