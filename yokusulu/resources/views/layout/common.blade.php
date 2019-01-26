@@ -6,7 +6,12 @@
 @yield('header')
 <body>
 <div class="contents">
-    @yield('content')
+	<div id="app">
+		<!-- デフォルトだとこの中ではvue.jsが有効 -->
+		<!-- example-component はLaravelに入っているサンプルのコンポーネント -->
+		<example-component></example-component>
+		@yield('content')
+	</div>
 </div>
 @yield('footer')
 </body>
