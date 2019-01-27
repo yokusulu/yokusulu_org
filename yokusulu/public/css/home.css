@@ -31,21 +31,24 @@
   width: 100%;
 }
 
-.contents .container .search_box form tr {
-  with: 100%;
+.contents .container .search_box form .form-item {
+  margin-top: 20px;
 }
 
-.contents .container .search_box form tr p {
+.contents .container .search_box form .form-item p {
+  margin-bottom: 2px;
   font-size: 18px;
-  margin-bottom: 3px;
-  font-weight: bold;
-  text-align: center;
 }
 
-.contents .container .search_box form tr .search_input {
-  border: 1px solid #000;
-  padding: 5px;
-  border-radius: 5px;
+.contents .container .search_box form .form-item input {
   width: 100%;
+  border-radius: 5px;
+  border: 1px solid #a2a2a2;
+  line-height: 20px;
+  padding: 5px;
+}
+
+.contents .container .search_box form .first-child {
+  margin-top: 0px;
 }
 

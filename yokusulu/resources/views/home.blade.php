@@ -15,19 +15,30 @@
         <div class="search_box">
             <form action="/search" method="post">
                 {{ csrf_field()}}
-                <tr>
-                    <p>都道府県</p>
-                    <input class="search_input" type="text" name="prefecture" placeholder="例:東京都">
-                </tr>
-                <tr>
+                <div class="form-item first-child">
+                    <p>エリア</p>
+                    <input type="text" name="prefecture" placeholder="例：東京">
+                </div>
+                <div class="form-item">
                     <p>チェックイン</p>
-                    <input class="search_input" type="text" name="checkin" placeholder="yyyy/mm/dd">
-                </tr>
-                <tr>
+                    <input type="text" name="checkin" placeholder="yyyy/mm/dd">
+                </div>
+                <div class="form-item">
                     <p>チェックアウト</p>
-                    <input class="search_input" type="text" name="checkout" placeholder="yyyy/mm/dd">
-                </tr>
-                <input type="submit" value="検索">
+                    <input type="text" name="checkout" placeholder="yyyy/mm/dd">
+                </div>
+                <div class="form-item">
+                    <p>ゲスト人数</p>
+                    <select class="" name="guest">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <input id="try" type="submit" value="送信">
+                </div>
             </form>
         </div>
     </div>
