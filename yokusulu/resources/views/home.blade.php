@@ -17,7 +17,7 @@
                 {{ csrf_field()}}
                 <div class="form-item first-child">
                     <p>エリア</p>
-                    <input type="text" name="prefecture" placeholder="例：東京">
+                    <input type="text" name="prefecture" placeholder="例:東京">
                 </div>
                 <div class="form-item">
                     <p>チェックイン</p>
