@@ -11,7 +11,7 @@
 			<tbody>
 			<tr>
 				<td>Nintendo Switch</td>
-				<td>{{a}}</td>
+				<td></td>
 				<td>
 					<input class='form-control' type='number' v-model='b'>
 				</td>

@@ -14055,7 +14055,7 @@ window.Vue = __webpack_require__(37);
  */
 
 Vue.component('example-component', __webpack_require__(40));
-Vue.component('AmountCalculation', __webpack_require__(43));
+Vue.component('amount-component', __webpack_require__(43));
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
@@ -47974,42 +47974,131 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 // 金額、計算
 /* harmony default export */ __webpack_exports__["default"] = ({
-    // button-counter と呼ばれる新しいコンポーネントを定義します
-    // new Vue({
-    //     el: "#app",
-    //     data: { a: 43300, b: 1, c: 5566, d: 1},
-    //     computed: {
-    //         sum: function() { return this.a * this.b + this.c * this.d },
-    //         tax: function() { return Math.ceil(this.sum * 0.08) },
-    //     },
-    // })
-
-    mounted: function mounted() {
-        console.log('Component mounted.');
-    }
+	mounted: function mounted() {
+		console.log('aaaaComponent mounted.');
+	}
 });
 new Vue({
-    el: "#app",
-    data: { a: 43300, b: 1, c: 5566, d: 1 },
-    computed: {
-        sum: function sum() {
-            return this.a * this.b + this.c * this.d;
-        },
-        tax: function tax() {
-            return Math.ceil(this.sum * 0.08);
-        }
-    }
+	el: "#app",
+	data: { a: 43300, b: 1, c: 5566, d: 1 },
+	computed: {
+		sum: function sum() {
+			return this.a * this.b + this.c * this.d;
+		},
+		tax: function tax() {
+			return Math.ceil(this.sum * 0.08);
+		}
+	}
 });
 
 /***/ }),
 /* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports={render:function(){},staticRenderFns:[]}
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "test" }, [
+    _c("table", { staticClass: "table" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("tbody", [
+        _c("tr", [
+          _c("td", [_vm._v("Nintendo Switch")]),
+          _vm._v(" "),
+          _c("td"),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.b,
+                  expression: "b"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "number" },
+              domProps: { value: _vm.b },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.b = $event.target.value
+                }
+              }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", [_vm._v("スプラトゥーン 2")]),
+          _vm._v(" "),
+          _c("td", [_vm._v(_vm._s(_vm.c))]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.d,
+                  expression: "d"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "number" },
+              domProps: { value: _vm.d },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.d = $event.target.value
+                }
+              }
+            })
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "text-right" }, [
+      _c("p", [_vm._v("  小計￥ " + _vm._s(_vm.sum))]),
+      _vm._v(" "),
+      _c("p", [_vm._v("消費税￥ " + _vm._s(_vm.tax))]),
+      _vm._v(" "),
+      _c("p", [_vm._v("  合計￥ " + _vm._s(_vm.sum + _vm.tax))])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th"),
+        _vm._v(" "),
+        _c("th", [_vm._v("価格")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("数量")])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
