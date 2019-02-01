@@ -13,7 +13,9 @@
   height: 500px; }
 
 .search_detail_project {
+  padding: 8px;
   width: 65%; }
 
 .seach_detail_about {
+  padding: 8px;
   width: 25%; }

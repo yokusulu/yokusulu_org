@@ -14,4 +14,6 @@
 Route::get('/', function () {    return view('welcome');});
 Route::get('sample', 'SamplesController@index');
 
-Route::get('search/detail', 'SearchController@detail_index');
+Route::get('search/detail/', 'SearchController@detail_index');
+
+Route::get('search/detail/{id}', 'SearchController@detail_index');
