@@ -15,15 +15,19 @@
 	<table class="member_regist_box">
 		<tr>
 			<td class="regist_genre">名前</td>
-			<td><input type="text" class="regist_input" name="name" maxlength="10" value="" placeholder="１０文字以内で入力"></td>
+			<td><input type="text" class="regist_input" name="name" maxlength="10" value="" placeholder="例)新垣結衣"><p>※50文字まで!!</p></td>
 		</tr>
 		<tr>
 			<td class="regist_genre">メールアドレス</td>
-			<td><input type="email" class="regist_input" name="email" placeholder="test@gmail.com"required></td>
+			<td><input type="email" class="regist_input" name="email" placeholder="例)gakki@gmail.com"></td>
 		</tr>
 		<tr>
 			<td class="regist_genre">パスワード</td>
-			<td><input type="password" class="regist_input" name="password" placeholder="英数8文字以上"required></td>
+			<td><input type="password" class="regist_input" name="password" placeholder="例) gakki0611" required><p>※英数字8文字以上16文字以下</p></td>
+		</tr>
+		<tr>
+			<td class="regist_genre">パスワード(確認)</td>
+			<td><input type="password" class="regist_input" name="password_confirmation" placeholder="例) gakki0611" required></td>
 		</tr>
 	</table>
 
