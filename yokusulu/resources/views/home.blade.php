@@ -20,21 +20,9 @@
                     <input type="text" name="prefecture" placeholder="例:東京">
                 </div>
                 <div class="form-item">
-                    <p>チェックイン</p>
-                    <input type="text" name="checkin" placeholder="yyyy/mm/dd">
-                </div>
-                <div class="form-item">
-                    <p>チェックアウト</p>
-                    <input type="text" name="checkout" placeholder="yyyy/mm/dd">
-                </div>
-                <div class="form-item">
-                    <p>ゲスト人数</p>
-                    <select class="" name="guest">
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
-                    </select>
+                    <p>一日の宿泊予算</p>
+                    <input type="text" name="budget" placeholder="例:6000">
+                    <p>※1000円単位で入力してください。</p>
                 </div>
                 <div class="form-item">
                     <input id="try" type="submit" value="送信">
