@@ -17,5 +17,7 @@ Route::get('sample', 'SamplesController@index');
 Route::any('/mypage', 'MypagesController@index');
 // 会員情報トップ画面
 Route::any('/mypage/myinfo', 'MypagesController@myinfo');
-// 会員情報トップ画面
+// 会員情報編集画面
 Route::any('/mypage/myinfo/edit', 'MypagesController@myinfo_edit');
+// 会員情報編集確認画面
+Route::any('/mypage/myinfo/edit/check', 'MypagesController@myinfo_edit_check');
