@@ -11,6 +11,7 @@
 @include('layout.header')
 
 @section('content')
+<?php var_dump($house_datas); ?>
 <div class="list">
     <h1>検索結果</h1>
     <div class="listItem fade-up">
