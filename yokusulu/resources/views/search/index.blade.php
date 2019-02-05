@@ -11,25 +11,7 @@
 @include('layout.header')
 
 @section('content')
-    <div class="container">
-        <div class="search_box">
-            <form action="/search" method="post">
-                {{ csrf_field()}}
-                <tr>
-                    <p>都道府県</p>
-                    {{$prefecture}}
-                </tr>
-                <tr>
-                    <p>チェックイン</p>
-                    <input class="search_input" type="text" name="checkin" placeholder="yyyy/mm/dd">
-                </tr>
-                <tr>
-                    <p>チェックアウト</p>
-                    <input class="search_input" type="text" name="checkout" placeholder="yyyy/mm/dd">
-                </tr>
-            </form>
-        </div>
-    </div>
+
 @endsection
 
 @section('pageJs')

@@ -15,8 +15,7 @@ class SearchController extends Controller
     public function index(Request $request)
     {
         $prefecture = $_POST['prefecture'];
-        $checkin    = $_POST['checkin'];
-        $checkout   = $_POST['checkout'];
-        return view('search.index',compact('prefecture','checkin','checkout'));
+        $budget    = $_POST['budget'];
+        return view('search.index',compact('prefecture','budget'));
     }
 }
