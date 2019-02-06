@@ -23,15 +23,7 @@
             <section id="book">
                 <h3>詳細予約状況</h3>
                 <ul>
-                    {{--@foreach($db_data as $recode)--}}
-                        {{--<li>{{$recode->name}}</li>--}}
-                        {{--<li>{{$recode->host_name}}</li>--}}
-                        {{--<li>{{$recode->zip}}</li>--}}
-                        {{--<li>{{$recode->prefecture}}</li>--}}
-                        {{--<li>{{$recode->city}}</li>--}}
-                        {{--<li>{{$recode->ward}}</li>--}}
-                        {{--<li>{{$recode->address}}</li>--}}
-                    {{--@endforeach--}}
+   {{$house_data->name}}
                 </ul>
             </section>
         </div>

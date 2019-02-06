@@ -2,31 +2,32 @@
 
 namespace App;
 
+use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
 class House extends Model
 {
-    private $house = 'houses';
+    public $table = '';
+
     //
-    // public function __construct()
-    // {
-    //     $this->$foo = TRUE;
-
-    //     echo($this->$foo);
-    // }
-
-    public static function get_data($house_id) {
-    	// $data = new House;
-    	 var_dump($this); die;
-    	// var_dump($this->$house); die;
-    $house_data = DB::table($house)->join('detail_houses', 'houses.id', '=', 'detail_houses.houses_id')->distinct()->get();
-    var_dump($house_data); die;
-   	 return $house;
+    public function __construct()
+    {
+        $this->table = "houses";
     }
 
-    // public static function a() {
-    // 	echo '成功'; die;
-    // 	 return $house;
-    // }
+    public function get_data()
+    {
+        $house_data = DB::table($this->table)->join(
+            'detail_houses',
+            'houses.id', '=',
+            'detail_houses.houses_id'
+        )->distinct()->get();
+//        var_dump($house_data);
+//        $house_arrayparams = array();
+//
+////        データ格納
+//        $house_arrayparams['name'] = $name;
+
+    }
 }
