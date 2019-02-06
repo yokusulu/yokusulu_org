@@ -22,11 +22,18 @@ class SearchController extends Controller
     public function detail_index()
     {
 //        $house_id = "1";
-        $house_data = new House;
+//        $house_data = new House;
+//        $house_data->get_data();
+//        var_dump($house_data);
 
-        $house_data->get_data();
-        var_dump($house_data);
+        // Frameworksモデルのインスタンス化
+        $md = new House();
+        // データ取得
+        $data = $md->get_data();
 
-        return view("search.detail.index")->with('house_data', $house_data);
+        // ビューを返す
+        return view('search.detail.index', ['data' => $data]);
+
+//        return view("search.detail.index")->with('house_data', $house_data);
     }
 }

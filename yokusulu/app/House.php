@@ -25,9 +25,10 @@ class House extends Model
         )->distinct()->get();
 //        var_dump($house_data);
 //        $house_arrayparams = array();
+//    }
 //
 ////        データ格納
 //        $house_arrayparams['name'] = $name;
-
+        return $house_data;
     }
 }

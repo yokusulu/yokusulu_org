@@ -23,7 +23,15 @@
             <section id="book">
                 <h3>詳細予約状況</h3>
                 <ul>
-   {{$house_data->name}}
+                    @foreach($data as $d)
+                        <li>{{$d->name}}</li>
+                        <li>{{$d->zip}}</li>
+                        <li>{{$d->prefecture}}</li>
+                        <li>{{$d->city}}</li>
+                        <li>{{$d->ward}}</li>
+                        <li>{{$d->price}}</li>
+
+                    @endforeach
                 </ul>
             </section>
         </div>
