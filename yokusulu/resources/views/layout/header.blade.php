@@ -1,5 +1,5 @@
 @section('header')
-<header class="header">
+<header class="header sticky-top">
     <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="#">YOKUSULU</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">

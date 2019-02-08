@@ -1,9 +1,9 @@
 @extends('layout.common')
 
-@section('title', 'samplepage')
-@section('description', '説明文')
+@section('title', 'HOME')
+@section('description', '空いたスペースを共有してWINWINな体験を。')
 @section('pageCss')
-<link href="/css/page.css" rel="stylesheet">
+<link href="/css/home.css" rel="stylesheet">
 @endsection
 
 @include('layout.head')
@@ -11,7 +11,7 @@
 @include('layout.header')
 
 @section('content')
-    <p>コンテンツ内容</p>
+
 @endsection
 
 @section('pageJs')
