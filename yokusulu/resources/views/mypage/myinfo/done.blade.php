@@ -8,24 +8,13 @@
 @include('layout.head')
 @include('layout.header')
 @section('content')
-<div class="user_info_table">
-	<table>
-		<tr>
-			<th>ご利用者登録情報編集</th>
-		</tr>
-		<tr>
-			<th><p>氏名</p></th>
-			<td><p>{{ $login_info["name"] }}</p></td>
-		</tr>
-		<tr>
-			<th>メールアドレス</th>
-			<td><p>{{ $login_info["email"] }}</p></td>
-		</tr>
-	</table>
+
+<div class="finish">
+	<p>登録変更完了！</p>
 </div>
 
 <div class="myinfo_edit_btn_box">
-	<a href="/mypage/myinfo/edit" class="myinfo_edit_btn">修正する</a>
+	<a href="/mypage" class="myinfo_edit_btn">会員画面TOPへ</a>
 </div>
 
 @endsection
