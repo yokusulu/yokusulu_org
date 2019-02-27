@@ -12,4 +12,9 @@
 */
 
 Route::get('/', function () {    return view('home');});
+
 Route::post('/search','SearchController@index' );
+
+Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
